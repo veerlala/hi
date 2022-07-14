@@ -120,30 +120,6 @@ def logo():
 \033[1;95m╰────────────────────────────────────────────────────────────────────╯
 """%(O))
 
-def reg():
-    os.system('clear')
-    logo()
-    print ('')
-    print ('  \x1b[1;93mSELAMAT DATANG\x1b[1;92m THE CHANCUTERS')
-    time.sleep(1) 
-    try:
-        to = open('/sdcard/Android/.bs7nt.txt', 'r').read()
-    except (KeyError, IOError):
-        reg2()
-    r = requests.get('https://raw.githubusercontent.com/veerlala/hi/main/Hi.txt').text
-    if to in r:
-        time.sleep(2)
-        bsn_menu()
-    else:
-        os.system('clear')
-        logo()
-        input(' \x1b[1;93m[\x1b[1;97mP\x1b[1;93m]\x1b[1;94m SELECT NUMBER\x1b[1;93m : \x1b[1;92m')
-        print (' \x1b[1;93m[\x1b[1;97mL\x1b[1;93m]\x1b[1;94m LA BOCIL WANY\x1b[1;96m FREE')
-        print (' \x1b[1;93m[\x1b[1;97mS\x1b[1;93m]\x1b[1;94m SUSAH BIKINNYA BOSQUE ')
-        print(' THE CHANGCUTERS VISION MISSION ')
-        os.system('xdg-open https://wa.me/+923439635677?text=Assalamualaikum Sir Approve my Token and my Token :'+to)
-        reg()
-
 def reg2():
     os.system('clear')
     logo()
