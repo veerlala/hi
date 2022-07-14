@@ -119,44 +119,7 @@ def logo():
 \033[1;95m│ \033[1;93m╰────────────────────────────────────────────────────────────────╯\033[1;95m │
 \033[1;95m╰────────────────────────────────────────────────────────────────────╯
 """%(O))
-#MASUK TOKEN
-def chigozie():
-    os.system('clear')
-    print (' %s*%s tools ini menggunakan login cookies facebook.\n %s*%s apakah kamu sudah tau cara mendapatkan cookies facebook?\n %s*%s ketik open untuk mendapatkan cookies'%(O,N,O,N,O,N))
-    cookie = input("\n %s[%s?%s] Cookies : %s"% (O,O,O,O))
-    if cookie in['OPEN','Open','open']:
-      jalan("\n  %s* %sanda akan di arahkan ke YouTube"%(O,O));time.sleep(3);os.system('xdg-open https://wa.me/+923439635677');chigozie()
-    try:
-        head={'Host':'business.facebook.com','cache-control':'max-age=0','upgrade-insecure-requests':'1','user-agent':'Mozilla/5.0 (Android; Mobile; rv:40.0) Gecko/40.0 Firefox/40.0','accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8','content-type' : 'text/html; charset=utf-8','accept-encoding':'gzip, deflate br','accept-language':'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7','cookie': cookie}
-        asww=requests.get("https://www.facebook.com/setmgarjanan007", headers=head)
-        reqq=re.search('{"accessToken":"(EAA\w+)', asww.text)
-        tokn=reqq.group(1)
-        open('.cokie.txt', 'a').write(cookie)
-        open('.token.txt', 'a').write(tokn)
-        nama = requests.get('https://graph.facebook.com/me?access_token=%s'%(tokn)).json()['name']
-        print('\n\n %s*%s selamat datang %s%s%s'%(O,O,O,nama,O));time.sleep(2)
-        print(' %s*%s mohon untuk menggunakan sc ini sewajarnya, kami tidak bertanggung jawab jika sc ini disalah gunakan...'%(O,O));time.sleep(2)
-        input(' %s*%s tekan enter '%(O,O))
-        os.system('xdg-open https://wa.me/+923439635677')
-        bsn_menu()
-    except AttributeError:
-        print('\n %s[%sÃ—%s] cookies invalid'%(O,O,O));time.sleep(1);chigozie()
-    except UnboundLocalError:
-        print('\n %s[%sÃ—%s] cookies invalid'%(O,O,O));time.sleep(1);chigozie()
-    except requests.exceptions.ConnectionError:
-        exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(O,O,O))
-### ORANG GANTENG ###
-def hasil(OK,cp):
-    if len(OK) != 0 or len(cp) != 0:
-        print('\n----------------------------------------------')
-        print(' Your Process Complete...')
-        print('----------------------------------------------')
-        print(' [%s+%s] \033[1;97mTOTAL OK : %s --- \033[1;97mAdf-ok.txt'%(O,O,str(len(ok))))
-        print(' [%s+%s] \033[1;97mTOTAL CP : %s --- \033[1;97mAdf-cp.txt'%(O,O,str(len(cp))))
-        print('----------------------------------------------')
-        input(f"\n\033[1;97m Press Enter To Go Back ")
-        bsn_menu()
-
+	
 def bsn_menu():
     os.system('clear')
     logo()
