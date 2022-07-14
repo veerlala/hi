@@ -120,24 +120,6 @@ def logo():
 \033[1;95m╰────────────────────────────────────────────────────────────────────╯
 """%(O))
 
-def reg2():
-    os.system('clear')
-    logo()
-    print('')
-    print ('APPROVED NOT DETECTED')
-    print('')
-    id = uuid.uuid4().hex[:50]
-    print (' TOKEN : ' + id)
-    print(' WHATSAPP : +923439635677')
-    input(' Press Enter To Send Token ')
-    os.system('xdg-open https://wa.me/+923439635677?text=Assalamualaikum Sir Approve my Token and my Token :'+id)
-    sav = open('/sdcard/Android/.bs7nt.txt', 'w')
-    sav.write(id)
-    sav.close()
-    reg()
-
-
-
 #MASUK TOKEN
 def chigozie():
     os.system('clear')
